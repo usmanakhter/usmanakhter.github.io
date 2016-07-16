@@ -76,6 +76,7 @@ $button2.click(function() {
 $button3.click(function() {
     $(".squareStyle").remove();
     newSquares();
+    normalHover();
 });
 
 
