@@ -1,0 +1,44 @@
+/* The sidebar menu */
+.main, .page{
+  font-family: 'Roboto', sans-serif;
+}
+
+.main a{
+  color: black;
+}
+
+.main a:hover{
+  color: orange;
+}
+
+#sidebar {
+  height: auto;
+  text-align: center;
+  border-left-style: dashed;
+  border-width:thin;
+}
+
+#sidebar img{
+  display: block;
+  max-height: 80%;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vh;
+}
+
+#sidebar img.icon{
+  display: block;
+  max-height: 30%;
+  max-width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page img{
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}

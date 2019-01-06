@@ -1,0 +1,109 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Usman Akhter's GitHub Page">
+    <meta name="author" content="Usman Akhter">
+
+    <title>Hi, I'm Usman</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reboot.min.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/my.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+
+<body>
+
+<div class="container page">
+    <div class="row">
+        <div class="col-md-1">
+        </div>
+
+        <div class="col-md-10">
+            <h4 style="text-align: center">View the full Notebook with code on <a href="https://github.com/usmanakhter/cms_opioid">my GitHub here</a></h4>
+            <br><br>
+            <p>The purpose of this notebook was to explore a Center for Medicare & Medicaid Services (CMS) dataset <a href="https://www.kaggle.com/cms/medicare-part-d-opioid-prescriber-summary-file">posted on Kaggle here.</a> The dataset "presents information on the individual opioid prescribing rates of health providers that participate in Medicare Part D program."</p><br> Let's take a look at the data!
+            <br><br>
+            <h5 style="text-align: center">---Intro to the Data---</h5>
+            <br>
+            <img src="images/opioid1.png" alt="??">
+            <br><br>
+            <img src="images/opioid2.png" alt="??">
+            <br><br><br>
+            <p>The first table describes the data, while the second is a preview of the data itself (not all columns shown in picture). <br>
+            'NPI' = 'National Provider Identifier', a unique ID for every physician in America.
+            <br>
+            'NPPES' = 'National Plan & Provider Enumeration System'
+            <br>
+            The remaining columns should be self-explanatory. 
+            <br><br>
+            As we can see, over 1.1 million unique physians are in this database. There are less data entires for opioid claims / extended release claims, likely because many physicians have prescribed 0 opioids. A quick search on <a href="https://www.uptodate.com/contents/prescription-of-opioids-for-acute-pain-in-opioid-naive-patients">UpToDate</a> shows that extended-release opioids, as you might expect, are indicated for long-acting/chronic pain. We can also see from the mean/median discrepancy that total claim count, opioid claim count, and extended-release opioid claim count have a right-tailed distribution.</p><br> Let's look at the frequency distribution of opioid prescriptions.
+            <br><br>
+            <img src="images/opioid3.png" alt="??">
+            <br><br>
+            <p>The vast majority (700K+) of the 1.1 million doctors have prescribed 0 or almost 0 opioids. There is a sharp decline in # of opioids prescribed after then, until around 10,000 opioids prescribed. The frequency of superprescribers becomes more even at this point between 10K to 22.5K opioids prescribed. </p>
+            <br><br>
+            <p>This begs the question... who are these doctors who have prescribed tens of thousands of opioids?</p>
+            <br><br><br><br>
+            <h5 style="text-align: center">---Who Prescribes the Most Opioids?---</h5>
+            <br>
+            <img src="images/opioid4.1.png" alt="??">
+            <br><br>
+            <p><u>These physicians have prescribed over 10K opioids each!</u></p>---------
+            <br><br>
+            <p><b>Which specialties prescribe the most?</b></p>
+            <br>
+            <img src="images/opioid5.png" alt="??">
+            <img src="images/opioid6.png" alt="??">
+            <p><u>Family and Internal lead opioid prescriptions.</u> Surprisingly, Nurse Practitioners and PAs account for almost 20% of prescriptions, though these prescriptions were probably made with a team including other Family/Internal docs.</p>
+
+            <p>A quick Google search shows that Family and Internal comprise the most active physicians in patient care, so the fact that they prescribed the most opioids shouldn't be surprising.</p>---------
+            <br><br>
+            <p>A more interesting statistic would be a specialty breakdown of <b>which doctors have prescribed over 5K in opioids...</b> we can call them opioid superprescribers. After all, a glance through the top opioid prescribers show that most of them are Pain doctors, not Family or Internal docs.</p>
+            <br>
+            <img src="images/opioid7.png" alt="??">
+            <img src="images/opioid8.png" alt="??">
+            <br><br>
+           <p>Now, the specialty dynamic changes. The vast majority of opioid superprescribers are <u>interventional pain, anesthesiology, physical medicine, and pain management doctors.</u></p>---------
+           <br><br>
+           <p>How about which specialty has the highest number of opioids prescribed per doctor in that specialty? In other words, <b>doctors of which specialty on average prescribe the most opioids?</b></p>
+           <br>
+           <img src="images/opioid9.png" alt="??">
+           <img src="images/opioid10.png" alt="??">
+           <br>
+           <p>Now we see that Pain Management (combined with Interventional Pain doctors here) prescribe the most per doctor relative to the other specialties. I was surprised to see Rheumatologists here, who do not prescribe large amounts overall relative to other specialties, but clearly high amounts per doctor relative to other specialties. They likely see lots of autoimmune / joint pain patients.</p>
+           <br><br><br><br>
+           <h5 style="text-align: center">---Which States Have the Most Opioid Prescriptions?---</h5>
+           <br>
+           <img src="images/opioid11.png" alt="??">
+           <img src="images/opioid13.png" alt="??">
+           <br>
+           <p>This makes sense... <u>CA, TX, FL</u> make up the top 3 most populous states in America with PA and MI in the top 10.</p>
+           <br><br>
+           <p>A more interesting statistic would be <b>opioid per capita.</b></p>
+           <img src="images/opioid14.png" alt="??">
+           <img src="images/opioid16.png" alt="??">
+           <br>
+           <p>California and Texas become relatively low in opioid claims after accounting for per capita. The southern and Applachian states experience highest opioid claims per capita. This corroborates the opioid epidemic narrative.</p>
+        </div>
+
+        <div class="col-md-1">
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+
+
+
+
+
+</html>
